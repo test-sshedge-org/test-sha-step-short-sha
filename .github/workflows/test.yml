@@ -1,0 +1,14 @@
+name: T4 - Step-level action with short SHA
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout using 7-char short SHA
+        uses: actions/checkout@11bd719
+      - name: Show result
+        run: echo "Checkout succeeded"
